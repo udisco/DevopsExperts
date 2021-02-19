@@ -1,6 +1,7 @@
 from datetime import datetime
 import pymysql
 
+
 def get_user_name_from_db(user_id):
     # Establishing a connection to DB
     conn = pymysql.connect(host='remotemysql.com', port=3306, user='jC9okm9Ppe', passwd='LBIGnhlfpI', db='jC9okm9Ppe')
@@ -12,6 +13,7 @@ def get_user_name_from_db(user_id):
     print("the name as listed in the DB is: ", user_name)
     cursor.close()
     conn.close()
+    return user_name
 
 
 def add_user_name_to_db(user_id, user_name):
@@ -89,3 +91,6 @@ def get_all_user_id_from_db():
     print("these are all the existing id's in the DB: ", row)
     cursor.close()
     conn.close()
+
+
+get_all_user_id_from_db()

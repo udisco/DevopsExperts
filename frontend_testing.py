@@ -10,10 +10,15 @@ def front_test(user_id):
     driver.get(url)
     try:
         user_name = driver.find_element_by_id('user').text
-        status = True
+        # status = True
         print("result of the frontend testing for the given id:", user_id, "the user name is: ", user_name)
     except Exception as e:
         print("web element 'user' is not found")
     finally:
         driver.quit()
         return status
+
+
+get_all_user_id_from_db()
+id = int(input("please type in a user id from the list above: "))
+front_test(id)
