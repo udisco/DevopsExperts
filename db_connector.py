@@ -93,4 +93,4 @@ def get_all_user_id_from_db():
     conn.close()
 
 
-get_all_user_id_from_db()
+# get_all_user_id_from_db()
