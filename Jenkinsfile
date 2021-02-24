@@ -3,10 +3,7 @@ pipeline {
 	options {
         disableConcurrentBuilds()
         buildDiscarder logRotator(daysToKeepStr: '5', numToKeepStr: '20')
-
-    }
-
-
+          }
 	stages {
 		stage('Git Checkout') {
 			steps {
