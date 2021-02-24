@@ -6,7 +6,10 @@ app = Flask(__name__)
 
 
 # accessed via <HOST>:<PORT>/users/get_user_data
-
+@app.route('stop_server')
+def stop_server():
+    os.kill(os.getpid(),signal.SIGTERM)
+    return 'Server Stopped'
 
 @app.route("/users/get_user_data/<user_id>")
 def get_user_name(user_id):
