@@ -9,6 +9,13 @@ pipeline {
 				git 'https://github.com/udisco/DevopsExperts.git'
 			}
 		}
+		stage('install dependencies') {
+   			steps {
+      				script {
+            				sh 'pip install flask'
+				}
+			}
+		}
 		stage('start_web_app') {
 			steps {
 				script {
