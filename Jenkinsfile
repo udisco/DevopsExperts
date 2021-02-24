@@ -19,7 +19,7 @@ pipeline {
 		stage('install dependencies') {
    			steps {
       				script {
-            				sh 'pip3 install Flask flask pymysql requests -t ./'
+            				sh 'pip3 install Flask flask pymysql requests connections -t ./'
 				}
 			}
 		}
