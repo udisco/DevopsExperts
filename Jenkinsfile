@@ -3,10 +3,7 @@ pipeline {
 	options {
         disableConcurrentBuilds()
         buildDiscarder logRotator(daysToKeepStr: '5', numToKeepStr: '20')
-       
-    }
-
-
+          }
 	stages {
 		stage('Git Checkout') {
 			steps {
@@ -23,14 +20,14 @@ pipeline {
 				}
 			}
 		}
-		stage('start_web_app') {
+		stage('start_backend_server_web') {
 			steps {
 				script {
 					sh 'nohup python3 web_app.py &'
 				}
 			}
 		}
-		stage('start rest_app') {
+		stage('start backend_server_rest') {
 			steps {
 				script {
 					sh 'nohup python3 rest_app.py &'

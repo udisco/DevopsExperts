@@ -19,6 +19,7 @@ def front_test(user_id):
         return status
 
 
-get_all_user_id_from_db()
-id = int(input("please type in a user id from the list above: "))
-front_test(id)
+if __name__ == "__main__":
+    get_all_user_id_from_db()
+    id = int(input("please type in a user id from the list above: "))
+    front_test(id)
