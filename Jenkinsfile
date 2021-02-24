@@ -1,10 +1,7 @@
 pipeline {
   agent any
-  options {
-          gitlabBuilds(builds: ['start_web_app', 'start rest_app', 'Run Backend Testing'])
-  }
   stages {
-    stage('Git Checkout') {
+    stage("Git Checkout") {
         steps {
             script {
             properties([pipelineTriggers([pollSCM('* * * * *')])])
@@ -13,7 +10,7 @@ pipeline {
             }
         }
     }
-    stage('start_web_app') {
+    stage('"start_web_app") {
         steps {
             script {
             sh 'python web_app.py'
