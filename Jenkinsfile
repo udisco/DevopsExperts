@@ -19,49 +19,49 @@ pipeline {
 		stage('install dependencies') {
    			steps {
       				script {
-            				sh 'pip3 install Flask flask pymysql requests connections -t ./'
+            				sh 'pip3 install Flask flask pymysql requests -t ./'
 				}
 			}
 		}
 		stage('start_web_app') {
 			steps {
 				script {
-					sh 'python web_app.py'
+					sh 'python3 web_app.py'
 				}
 			}
 		}
 		stage('start rest_app') {
 			steps {
 				script {
-					sh 'python rest_app.py'
+					sh 'python3 rest_app.py'
 				}
 			}
 		}
 		stage('Run Backend Testing') {
 			steps {
 				script {
-					sh 'python backend_testing.py'
+					sh 'python3 backend_testing.py'
 				}
 			}
 		}
 		stage('Run Front End Testing') {
 			steps {
 				script {
-					sh 'python frontend_testing.py'
+					sh 'python3 frontend_testing.py'
 				}
 			}
 		}
 		stage('Run Combined Testing') {
 			steps {
 				script {
-					sh 'python combined_testing.py'
+					sh 'python3 combined_testing.py'
 				}
 			}
 		}
 		stage('Run Clean Environment') {
 			steps {
 				script {
-					sh 'python clean_environment.py'
+					sh 'python3 clean_environment.py'
 				}
 			}
 		}
