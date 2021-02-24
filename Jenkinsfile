@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage("Git Checkout") {
+    stage('Git Checkout') {
         steps {
             script {
             properties([pipelineTriggers([pollSCM('* * * * *')])])
@@ -10,7 +10,7 @@ pipeline {
             }
         }
     }
-    stage('"start_web_app") {
+    stage('start_web_app') {
         steps {
             script {
             sh 'python web_app.py'
