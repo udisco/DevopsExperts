@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  options {
+          gitlabBuilds(builds: ['start_web_app', 'start rest_app', 'Run Backend Testing'])
+  }
   stages {
     stage('Git Checkout') {
         steps {
