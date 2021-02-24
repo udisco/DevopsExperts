@@ -26,14 +26,14 @@ pipeline {
 		stage('start_web_app') {
 			steps {
 				script {
-					sh 'python3 web_app.py'
+					sh 'nohup python3 web_app.py &'
 				}
 			}
 		}
 		stage('start rest_app') {
 			steps {
 				script {
-					sh 'python3 rest_app.py'
+					sh 'nohup python3 rest_app.py &'
 				}
 			}
 		}
