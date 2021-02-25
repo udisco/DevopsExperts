@@ -20,6 +20,4 @@ def front_test(user_id):
 
 
 if __name__ == "__main__":
-    # get_all_user_id_from_db()
-    id = 3
-    front_test(id)
+    front_test(1)
