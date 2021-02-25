@@ -20,14 +20,14 @@ pipeline {
 				}
 			}
 		}
-		stage('start_backend_server_web') {
+		stage('start_frontend_server') {
 			steps {
 				script {
 					sh 'nohup python3 web_app.py &'
 				}
 			}
 		}
-		stage('start backend_server_rest') {
+		stage('start backend_server') {
 			steps {
 				script {
 					sh 'nohup python3 rest_app.py &'
