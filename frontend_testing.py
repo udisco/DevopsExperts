@@ -20,6 +20,6 @@ def front_test(user_id):
 
 
 if __name__ == "__main__":
-    get_all_user_id_from_db()
-    id = int(input("please type in a user id from the list above: "))
+    # get_all_user_id_from_db()
+    id = 3
     front_test(id)

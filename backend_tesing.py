@@ -25,8 +25,8 @@ def get_user(user_id, user_name):
 
 
 if __name__ == "__main__":
-    user_id = int(input("please type a user id: "))
-    user_name = input("please type a name: ")
+    user_id = 1120
+    user_name = ""
     post_user(user_id, user_name)
     get_user(user_id,user_name)
     get_user_name_from_db(user_id)
