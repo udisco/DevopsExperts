@@ -26,7 +26,7 @@ def get_user(user_id, user_name):
 
 if __name__ == "__main__":
     post_user(1, 'lihi ofir')
-    get_user(1,'lihi ofir')
+    get_user(1, 'lihi ofir')
     get_user_name_from_db(1)
 
 
