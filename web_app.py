@@ -1,12 +1,13 @@
+import os
+import signal
 from flask import Flask
-
 from db_connector import get_user_name_from_db
 
 app = Flask(__name__)
 
 
 # accessed via <HOST>:<PORT>/users/get_user_data
-@app.route('stop_server')
+@app.route('/stop_server')
 def stop_server():
     os.kill(os.getpid(),signal.SIGTERM)
     return 'Server Stopped'

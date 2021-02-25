@@ -1,12 +1,11 @@
 import os
 import signal
 from flask import Flask, request
-
 from db_connector import get_user_name_from_db, add_user_name_to_db, delete_user_name_from_db, update_user_name_in_db
 
 app = Flask(__name__)
 
-@app.route('stop_server')
+@app.route('/stop_server')
 def stop_server():
     os.kill(os.getpid(),signal.SIGTERM)
     return 'Server Stopped'
